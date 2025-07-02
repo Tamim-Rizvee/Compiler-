@@ -17,7 +17,7 @@ public:
     Symbol_info(string sym, string type) : symbol(sym), symbol_type(type) {}
     void show()
     {
-        output_file << "< " << symbol << " , " << symbol_type << " >";
+        output_file << "< " << symbol << " , " << symbol_type << " > ";
     }
 };
 
@@ -33,10 +33,16 @@ public:
     }
     void insert(string symbol, string type)
     {
+        auto is = search(symbol);
+        if(is.first)
+        {
+            output_file << "Already Exists" << uwu;
+            return;
+        }
         int n = hash_func(symbol);
         table[n].push_back(Symbol_info(symbol, type));
         output_file << "inserted at position " << n << "," << table[n].size() - 1 << uwu;
-    }
+    
 
     void print()
     {
@@ -44,9 +50,9 @@ public:
         {
             if (!table[i].empty())
             {
+                output_file << i << "-> ";
                 for (auto &sym : table[i])
                 {
-                    output_file << i << "-> ";
                     sym.show();
                 }
                 output_file << uwu;
