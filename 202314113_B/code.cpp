@@ -3,6 +3,7 @@
 #define iint long long
 #define uwu '\n'
 #define ROLL_SUM 17
+#define TABLE_SIZE 100
 using namespace std;
 
 ifstream input_file("input.txt");
@@ -46,7 +47,7 @@ public:
 
     void print()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < TABLE_SIZE; i++)
         {
             if (!table[i].empty())
             {
@@ -101,7 +102,7 @@ int Symbol_table::hash_func(string symbol)
         for (int i = 0; i < siz; i++)
             sum += symbol[i];
     }
-    return ((sum << 3) * ROLL_SUM) % 100;
+    return ((sum << 3) * ROLL_SUM) % TABLE_SIZE;
 }
 
 void process_command(Symbol_table &st, string command)
