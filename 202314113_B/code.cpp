@@ -51,17 +51,34 @@ public:
         }
     }
 
-    pair<bool , pair<int , int>>  search(string symbol)
+    pair<bool, pair<int, int>> search(string symbol)
     {
         int n = hash_func(symbol);
-        if(table[n].empty())
+        if (table[n].empty())
             return {false, {0, 0}};
-        for (int i = 0; i< table[n].size(); i++)
+        for (int i = 0; i < (int)table[n].size(); i++)
         {
-            if(table[n][i].symbol == symbol)
+            if (table[n][i].symbol == symbol)
                 return {true, {n, i}};
         }
         return {false, {0, 0}};
+    }
+
+    void delete_(string symbol)
+    {
+        auto is = search(symbol);
+        if (!is.first)
+        {
+            cout << "Not Found" << uwu;
+            return;
+        }
+        int i = is.second.first, j = is.second.second, n = table[i].size();
+        for (int k = j; k < n - 1; k++)
+        {
+            table[i][k] = table[i][k + 1];
+        }
+        table[i].pop_back();
+        cout << "Deleted From " << i << "," << j << uwu;
     }
 };
 
@@ -89,16 +106,18 @@ void process_command(Symbol_table &st)
         command_store.push_back(op);
     if (command_store[0] == "I")
         st.insert(command_store[1], command_store[2]);
-    else if(command_store[0] == "P")
+    else if (command_store[0] == "P")
         st.print();
-    else if(command_store[0] == "L")
+    else if (command_store[0] == "L")
     {
         auto ans = st.search(command_store[1]);
-        if(ans.first)
+        if (ans.first)
             cout << "Found at " << ans.second.first << ", " << ans.second.second;
         else
             cout << "Not Found" << uwu;
     }
+    else if (command_store[0] == "D")
+        st.delete_(command_store[1]);
 }
 
 int main()
