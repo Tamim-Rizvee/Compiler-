@@ -42,7 +42,7 @@ public:
         int n = hash_func(symbol);
         table[n].push_back(Symbol_info(symbol, type));
         output_file << "inserted at position " << n << "," << table[n].size() - 1 << uwu;
-    
+    }
 
     void print()
     {
