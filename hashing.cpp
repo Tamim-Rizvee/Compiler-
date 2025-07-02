@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define Onii_chan ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)
+#define Onii_chan ios_base::sync_with_stdio(0), cin.tie(0), output_file.tie(0)
 #define iint long long
 #define uwu '\n'
 #define table_size 100
@@ -10,7 +10,7 @@ using namespace std;
 //     int ans = 0;
 //     for (int i = 0; i < 3; i++)
 //         ans += value[i];
-//     cout << ans << uwu;
+//     output_file << ans << uwu;
 //     return (ans * 202314113) % 20;
 // }
 
@@ -41,7 +41,7 @@ int main()
 {
     Onii_chan;
     string s1 = "var_1";
-    // cout << hash_func(s1);
-    // cout << hash_("int", 3);
+    // output_file << hash_func(s1);
+    // output_file << hash_("int", 3);
     return 0;
 }

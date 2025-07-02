@@ -1,9 +1,12 @@
 #include <bits/stdc++.h>
-#define Onii_chan ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)
+#define Onii_chan ios_base::sync_with_stdio(0), cin.tie(0), output_file.tie(0)
 #define iint long long
 #define uwu '\n'
 #define ROLL_SUM 17
 using namespace std;
+
+ifstream input_file("input.txt");
+ofstream output_file("output.txt");
 
 class Symbol_info
 {
@@ -14,7 +17,7 @@ public:
     Symbol_info(string sym, string type) : symbol(sym), symbol_type(type) {}
     void show()
     {
-        cout << "< " << symbol << " , " << symbol_type << " >";
+        output_file << "< " << symbol << " , " << symbol_type << " >";
     }
 };
 
@@ -32,7 +35,7 @@ public:
     {
         int n = hash_func(symbol);
         table[n].push_back(Symbol_info(symbol, type));
-        cout << "inserted at position " << n << "," << table[n].size() - 1 << uwu;
+        output_file << "inserted at position " << n << "," << table[n].size() - 1 << uwu;
     }
 
     void print()
@@ -43,10 +46,10 @@ public:
             {
                 for (auto &sym : table[i])
                 {
-                    cout << i << "-> ";
+                    output_file << i << "-> ";
                     sym.show();
                 }
-                cout << uwu;
+                output_file << uwu;
             }
         }
     }
@@ -69,7 +72,7 @@ public:
         auto is = search(symbol);
         if (!is.first)
         {
-            cout << "Not Found" << uwu;
+            output_file << "Not Found" << uwu;
             return;
         }
         int i = is.second.first, j = is.second.second, n = table[i].size();
@@ -78,7 +81,7 @@ public:
             table[i][k] = table[i][k + 1];
         }
         table[i].pop_back();
-        cout << "Deleted From " << i << "," << j << uwu;
+        output_file << "Deleted From " << i << "," << j << uwu;
     }
 };
 
@@ -95,11 +98,11 @@ int Symbol_table::hash_func(string symbol)
     return ((sum << 3) * ROLL_SUM) % 100;
 }
 
-void process_command(Symbol_table &st)
+void process_command(Symbol_table &st, string command)
 {
-    string command, op;
+    string op;
     vector<string> command_store;
-    getline(cin, command);
+    // getline(cin, command);
     command_store.clear();
     istringstream iss(command);
     while (iss >> op)
@@ -112,9 +115,9 @@ void process_command(Symbol_table &st)
     {
         auto ans = st.search(command_store[1]);
         if (ans.first)
-            cout << "Found at " << ans.second.first << ", " << ans.second.second;
+            output_file << "Found at " << ans.second.first << ", " << ans.second.second << uwu;
         else
-            cout << "Not Found" << uwu;
+            output_file << "Not Found" << uwu;
     }
     else if (command_store[0] == "D")
         st.delete_(command_store[1]);
@@ -124,13 +127,12 @@ int main()
 {
     // Onii_chan;
     Symbol_table st;
-    int n;
-    cout << "Enter number of symbols to insert: ";
-    cin >> n;
-    cin.ignore();
-    for (int i = 0; i < n; i++)
+    string line;
+    while (getline(input_file, line))
     {
-        process_command(st);
+        process_command(st, line);
     }
+    input_file.close();
+    output_file.close();
     return 0;
 }
