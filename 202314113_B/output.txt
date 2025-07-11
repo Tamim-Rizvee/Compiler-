@@ -2,46 +2,46 @@ inserted at position 92,0
 inserted at position 28,0
 inserted at position 44,0
 inserted at position 12,0
-12-> < abc , FUNCTION >
-28-> < b , IDENTIFIER >
-44-> < funcname , FUNCTION >
-92-> < a , IDENTIFIER >
+12-> < abc , FUNCTION > 
+28-> < b , IDENTIFIER > 
+44-> < funcname , FUNCTION > 
+92-> < a , IDENTIFIER > 
 Found at 12, 0
 Found at 92, 0
 Not Found
 Deleted From 12,0
-28-> < b , IDENTIFIER >
-44-> < funcname , FUNCTION >
-92-> < a , IDENTIFIER >
+28-> < b , IDENTIFIER > 
+44-> < funcname , FUNCTION > 
+92-> < a , IDENTIFIER > 
 inserted at position 0,0
 Not Found
 inserted at position 96,0
 inserted at position 92,1
 inserted at position 28,1
-0-> < 123 , NUMBER >
-28-> < b , IDENTIFIER >28-> < >= , RELOP >
-44-> < funcname , FUNCTION >
-92-> < a , IDENTIFIER >92-> < == , RELOP >
-96-> < = , RELOP >
-inserted at position 96,1
+0-> < 123 , NUMBER > 
+28-> < b , IDENTIFIER > < >= , RELOP > 
+44-> < funcname , FUNCTION > 
+92-> < a , IDENTIFIER > < == , RELOP > 
+96-> < = , RELOP > 
+Already Exists
 Deleted From 92,1
-0-> < 123 , NUMBER >
-28-> < b , IDENTIFIER >28-> < >= , RELOP >
-44-> < funcname , FUNCTION >
-92-> < a , IDENTIFIER >
-96-> < = , RELOP >96-> < = , RELOP >
+0-> < 123 , NUMBER > 
+28-> < b , IDENTIFIER > < >= , RELOP > 
+44-> < funcname , FUNCTION > 
+92-> < a , IDENTIFIER > 
+96-> < = , RELOP > 
 Not Found
 inserted at position 28,2
-0-> < 123 , NUMBER >
-28-> < b , IDENTIFIER >28-> < >= , RELOP >28-> < 204 , NUMBER >
-44-> < funcname , FUNCTION >
-92-> < a , IDENTIFIER >
-96-> < = , RELOP >96-> < = , RELOP >
+0-> < 123 , NUMBER > 
+28-> < b , IDENTIFIER > < >= , RELOP > < 204 , NUMBER > 
+44-> < funcname , FUNCTION > 
+92-> < a , IDENTIFIER > 
+96-> < = , RELOP > 
 Deleted From 28,2
-inserted at position 0,1
-inserted at position 92,1
-0-> < 123 , NUMBER >0-> < 123 , NUMBER >
-28-> < b , IDENTIFIER >28-> < >= , RELOP >
-44-> < funcname , FUNCTION >
-92-> < a , IDENTIFIER >92-> < a , IDENTIFIER >
-96-> < = , RELOP >96-> < = , RELOP >
+Already Exists
+Already Exists
+0-> < 123 , NUMBER > 
+28-> < b , IDENTIFIER > < >= , RELOP > 
+44-> < funcname , FUNCTION > 
+92-> < a , IDENTIFIER > 
+96-> < = , RELOP > 
