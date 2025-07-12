@@ -6,13 +6,15 @@
     "workbench.activityBar.location": "top",
     "editor.minimap.enabled": false,
     "background.windowBackgrounds": [
-        "/home/tamim-rizvee/Downloads/wallpaperflare.com_wallpaper \\(1\\).jpg",
-        "d:/wallpapers/vs code.jpg"
+        "d:/wallpapers/wallpaperflare.com_wallpaper.jpg",
+        "/home/tamim-rizvee/Pictures/wallpaperflare.com_wallpaper.jpg"
     ],
     "editor.fontFamily": "cartograph CF",
+    "editor.scrollbar.vertical": "hidden",
     "workbench.colorTheme": "GitHub Dark Default",
     "editor.formatOnSave": true,
     "editor.fontSize": 15,
+    "editor.colorDecorators": true,
     "files.autoSave": "afterDelay",
     "workbench.tree.enableStickyScroll": false,
     "workbench.tree.renderIndentGuides": "none",
@@ -30,8 +32,10 @@
     "material-icon-theme.hidesExplorerArrows": true,
     "terminal.external.linuxExec": "gnome-terminal",
     "workbench.startupEditor": "none",
+    "background.autoInstall": true,
+    "background.smoothImageRendering": true,
     "background.backgroundOpacity": [
-        0.2,
+        0.75,
         0.1,
         0.1,
         0.1
@@ -41,6 +45,16 @@
         "editorCursor.foreground": "#ffffff",
         "editorLineNumber.activeForeground": "#ffffff",
         "editor.selectionBackground": "#272a2c",
+        "sideBar.background": "#000000",
+        "tab.activeBackground": "#000000",
+        "tab.inactiveBackground": "#000000",
+        "tab.activeForeground": "#ffffff",
+        "tab.border": "#000000",
+        "tab.activeBorderTop": "#00000000",
+        "statusBar.background": "#000000",
+        "statusBar.border": "#000000",
+        "titleBar.border": "#000000",
+        "titleBar.activeBackground": "#000000",
     },
     "workbench.tips.enabled": false,
     "editor.formatOnPaste": true,
@@ -48,8 +62,8 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "custom-ui-style.electron": {
         "titleBarStyle": "hiddenInset",
-        "titlebar":{
-            "backgroundColor":"#000000",
+        "titlebar": {
+            "backgroundColor": "#000000",
         },
         "trafficLightPosition": {
             "x": 20,
@@ -78,4 +92,47 @@
         ".monaco-workbench .part.editor > .content .editor-group-container > .title > .label-container > .title-label": "padding-left: 60px"
     },
     "window.commandCenter": false,
+    "background.useInvertedOpacity": true,
+    "editor.formatOnType": true,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "variable",
+                    "variable.other",
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "storage.type",
+                    "support.type"
+                ],
+                "settings": {
+                    "fontStyle": "bold italic",
+                    "foreground": "#ff94ed"
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.function"
+                ],
+                "settings": {
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": [
+                    "support.class",
+                    "support.type",
+                    "entity.name.type"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            }
+        ]
+    }
 }
