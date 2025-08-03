@@ -1,0 +1,28 @@
+int main(){
+	int a, b, 12abcd,abdc1,_12abcd;
+	float b=1.2e-5;
+	a = 5;
+	b = 3.5140;
+	b = 1.51.40;
+	
+	a = a >> 1;
+	
+	b = 10;
+
+	b <<= 5;
+
+	printf("A string");
+	
+	
+
+	// a comment
+
+
+	/** another
+	*** multi line 
+	//inserted
+	comment ***/
+
+
+	return 0;
+	}
