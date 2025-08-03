@@ -1,249 +1,61 @@
-none i
-none n
-none t
-none  
-none m
-none a
-none i
-none n
-none (
-none )
-none {
-
-none 	
-none i
-none n
-none t
-none  
-none a
-none ,
-none  
-none b
-none ,
-none  
-none 1
-none 2
-none a
-none b
-none c
-none d
-none ,
-none a
-none b
-none d
-none c
-none 1
-none ,
-none _
-none 1
-none 2
-none a
-none b
-none c
-none d
-none ;
-
-none 	
-none f
-none l
-none o
-none a
-none t
-none  
-none b
-none =
-none 1
-none .
-none 2
-none e
-none -
-none 5
-none ;
-
-none 	
-none a
-none  
-none =
-none  
-none 5
-none ;
-
-none 	
-none b
-none  
-none =
-none  
-none 3
-none .
-none 5
-none 1
-none 4
-none 0
-none ;
-
-none 	
-none b
-none  
-none =
-none  
-none 1
-none .
-none 5
-none 1
-none .
-none 4
-none 0
-none ;
-
-none 	
-
-none 	
-none a
-none  
-none =
-none  
-none a
-none  
-none >
-none >
-none  
-none 1
-none ;
-
-none 	
-
-none 	
-none b
-none  
-none =
-none  
-none 1
-none 0
-none ;
-
-
-none 	
-none b
-none  
-none <
-none <
-none =
-none  
-none 5
-none ;
-
-
-none 	
-none p
-none r
-none i
-none n
-none t
-none f
-none (
-none "
-none A
-none  
-none s
-none t
-none r
-none i
-none n
-none g
-none "
-none )
-none ;
-
-none 	
-
-none 	
-
-
-none 	
-none /
-none /
-none  
-none a
-none  
-none c
-none o
-none m
-none m
-none e
-none n
-none t
-
-
-
-none 	
-none /
-none *
-none *
-none  
-none a
-none n
-none o
-none t
-none h
-none e
-none r
-
-none 	
-none *
-none *
-none *
-none  
-none m
-none u
-none l
-none t
-none i
-none  
-none l
-none i
-none n
-none e
-none  
-
-none 	
-none /
-none /
-none i
-none n
-none s
-none e
-none r
-none t
-none e
-none d
-
-none 	
-none c
-none o
-none m
-none m
-none e
-none n
-none t
-none  
-none *
-none *
-none *
-none /
-
-
-
-none 	
-none r
-none e
-none t
-none u
-none r
-none n
-none  
-none 0
-none ;
-
-none 	
-none }
-
+<Keywords , int, 1>
+<Identifier , main, 1>
+<Parentheses , (, 1>
+<Parentheses , ), 1>
+<Curly , {, 1>
+<Keywords , int, 2>
+<Identifier , a, 2>
+<Seperator , , , 2>
+<Identifier , b, 2>
+<Seperator , , , 2>
+<Number , 12, 2>
+<Identifier , abcd, 2>
+<Seperator , , , 2>
+<Identifier , abdc1, 2>
+<Seperator , , , 2>
+<Identifier , _12abcd, 2>
+<Seperator , ; , 2>
+<Keywords , float, 3>
+<Identifier , b, 3>
+<Assignment Operator , = , 3>
+<Number , 1.2e-5, 3>
+<Seperator , ; , 3>
+<Identifier , a, 4>
+<Assignment Operator , = , 4>
+<Number , 5, 4>
+<Seperator , ; , 4>
+<Identifier , b, 5>
+<Assignment Operator , = , 5>
+<Number , 3.5140, 5>
+<Seperator , ; , 5>
+<Identifier , b, 6>
+<Assignment Operator , = , 6>
+<Number , 1.51.40, 6>
+<Seperator , ; , 6>
+<Identifier , a, 8>
+<Assignment Operator , = , 8>
+<Identifier , a, 8>
+<Bitwise Operartor , >>, 8>
+<Number , 1, 8>
+<Seperator , ; , 8>
+<Identifier , b, 10>
+<Assignment Operator , = , 10>
+<Number , 10, 10>
+<Seperator , ; , 10>
+<Identifier , b, 12>
+<Assignment Operator , <<= , 12>
+<Number , 5, 12>
+<Seperator , ; , 12>
+<Function , "printf" , 14>
+<Seperator , ; , 14>
+//<Identifier , a, 18>
+<Identifier , comment, 18>
+/**<Identifier , another, 21>
+***<Identifier , multi, 22>
+<Identifier , line, 22>
+//<Identifier , inserted, 23>
+<Identifier , comment, 24>
+***/<Keywords , return, 27>
+<Number , 0, 27>
+<Seperator , ; , 27>
+<Curly , }, 28>
