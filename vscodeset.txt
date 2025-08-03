@@ -6,12 +6,13 @@
     "workbench.activityBar.location": "top",
     "editor.minimap.enabled": false,
     "background.windowBackgrounds": [
-        "d:/wallpapers/wallpaperflare.com_wallpaper.jpg",
-        "/home/tamim-rizvee/Pictures/wallpaperflare.com_wallpaper.jpg"
+        "/home/tamim-rizvee/Pictures/wallpaperflare.com_wallpaper.jpg",
+        "d:/wallpapers/wallpaperflare.com_wallpaper.jpg"
     ],
     "editor.fontFamily": "cartograph CF",
     "editor.scrollbar.vertical": "hidden",
-    "editor.cursorStyle": "block",
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 4,
     "workbench.colorTheme": "GitHub Dark Default",
     "editor.formatOnSave": true,
     "editor.fontSize": 15,
@@ -56,6 +57,19 @@
         "statusBar.border": "#000000",
         "titleBar.border": "#000000",
         "titleBar.activeBackground": "#000000",
+        "editorOverviewRuler.wordHighlightStrongForeground": "#0000",
+        "editorOverviewRuler.selectionHighlightForeground": "#0000",
+        "editorOverviewRuler.rangeHighlightForeground": "#0000",
+        "editorOverviewRuler.wordHighlightForeground": "#0000",
+        "editorOverviewRuler.bracketMatchForeground": "#0000",
+        "editorOverviewRuler.findMatchForeground": "#0000",
+        "editorOverviewRuler.modifiedForeground": "#0000",
+        "editorOverviewRuler.deletedForeground": "#0000",
+        "editorOverviewRuler.warningForeground": "#0000",
+        "editorOverviewRuler.addedForeground": "#0000",
+        "editorOverviewRuler.errorForeground": "#0000",
+        "editorOverviewRuler.infoForeground": "#0000",
+        "editorOverviewRuler.border": "#0000",
     },
     "workbench.tips.enabled": false,
     "editor.formatOnPaste": true,
@@ -138,5 +152,12 @@
         ]
     },
     "git.autofetch": true,
-    "github.copilot.nextEditSuggestions.enabled": true
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "workbench.layoutControl.enabled": false,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    }
 }
