@@ -48,14 +48,7 @@
 <Seperator , ; , 12>
 <Function , "printf" , 14>
 <Seperator , ; , 14>
-//<Identifier , a, 18>
-<Identifier , comment, 18>
-/**<Identifier , another, 21>
-***<Identifier , multi, 22>
-<Identifier , line, 22>
-//<Identifier , inserted, 23>
-<Identifier , comment, 24>
-***/<Keywords , return, 27>
-<Number , 0, 27>
-<Seperator , ; , 27>
-<Curly , }, 28>
+<Keywords , return, 26>
+<Number , 0, 26>
+<Seperator , ; , 26>
+<Curly , }, 27>
