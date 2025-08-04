@@ -8,8 +8,6 @@
 <Seperator , , , 2>
 <Identifier , b, 2>
 <Seperator , , , 2>
-<Number , 12, 2>
-<Identifier , abcd, 2>
 <Seperator , , , 2>
 <Identifier , abdc1, 2>
 <Seperator , , , 2>

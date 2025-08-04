@@ -25,6 +25,7 @@ single_comment		"//".*
 multi_line 			"/*"([^*]|\*+[^*/])*\**"*/"
 
 %%
+{digits}{letter}+	{}
 \n					{line_number++;}
 {single_comment}	{line_number++;}
 {multi_line}		{
