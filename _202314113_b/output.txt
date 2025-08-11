@@ -46,7 +46,7 @@
 <Seperator , ; , 12>
 <Function , "printf" , 14>
 <Seperator , ; , 14>
-<Keywords , return, 26>
-<Number , 0, 26>
-<Seperator , ; , 26>
-<Curly , }, 27>
+<Keywords , return, 28>
+<Number , 0, 28>
+<Seperator , ; , 28>
+<Curly , }, 29>

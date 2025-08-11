@@ -30,7 +30,7 @@ multi_line 			"/*"([^*]|\*+[^*/])*\**"*/"
 {single_comment}	{line_number++;}
 {multi_line}		{
 						for(int i = 0; yytext[i]; i++)
-							if(i == '\n') line_number++;
+							if(yytext[i] == '\n') line_number++;
 					}
 {keyword}			{fprintf(yyout , "<Keywords , %s, %d>\n" , yytext, line_number);}
 {id}				{fprintf(yyout , "<Identifier , %s, %d>\n" , yytext, line_number);}

@@ -709,7 +709,7 @@ YY_RULE_SETUP
 #line 31 "code.l"
 {
 						for(int i = 0; yytext[i]; i++)
-							if(i == '\n') line_number++;
+							if(yytext[i] == '\n') line_number++;
 					}
 	YY_BREAK
 case 5:
