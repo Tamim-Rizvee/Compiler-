@@ -770,7 +770,7 @@ YY_RULE_SETUP
 case 15:
 YY_RULE_SETUP
 #line 50 "code.l"
-{fprintf(yyout , "<String Literal , %s , %d>\n" , yytext , line_number);}
+{fprintf(yyout , "<String Literal , %s , %d>\n" , yytext , line_number);line_number++;}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP

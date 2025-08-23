@@ -47,7 +47,7 @@ multi_line 			"/*"([^*]|\*+[^*/])*\**"*/"
 						fprintf(yyout , "<Function , \"%s\" , %d>\n" , yytext , line_number);
 					}
 {delim}				{}
-{literals}			{fprintf(yyout , "<String Literal , %s , %d>\n" , yytext , line_number);}
+{literals}			{fprintf(yyout , "<String Literal , %s , %d>\n" , yytext , line_number);line_number++;}
 %%
 
 int main()

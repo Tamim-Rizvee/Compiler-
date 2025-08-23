@@ -1,33 +1,48 @@
 %option noyywrap
 %{
 #include<stdio.h>
+FILE *yyin;
+FILE *yyout;
+int is_name = 0;
+int count = 0;
 %}
-
-digit			[0-9]
-digits 			{digit}+
-letter 			[a-zA-Z_]
-id 				{letter}({letter}|{digit})*
-delim 			[ \t\n]
-number 			[+\-]?{digits}(\.{digits})*(e[+\-]?{digits})?
-bit_op			>>|<<|&|^|\|
-ass_op			=|<<=|>>=|&=|^=|\|=
-parenthesis 	[()]
-curly_braces	[{}]
-function		{id}\(\".*\"\)
+upper_case 		[A-Z]
+lower_case 		[a-z]
+digit 			[0-9]
+order_num 		"ORD"({digit}|{upper_case})+
+name			{upper_case}{lower_case}+
+email 			{lower_case}({lower_case}|{digit}|_|\.)*@{lower_case}+\.{lower_case}+
+date			{digit}{digit}\/{digit}{digit}\/{digit}{digit}{digit}{digit}
+airtel 			(\+88)?016{digit}+
+bl 				(\+88)?014{digit}+
+gp				(\+88)?(017|013){digit}+
 
 %%
-{function}		{printf("function , %s" , yytext);}
-{number}		{printf("number , %s\n", yytext);}
-{id}			{printf("Identifier , %s\n" , yytext);}
-{ass_op}		{printf("ass_op , %s\n" , yytext);}
-{bit_op}		{printf("Bit_op , %s\n" , yytext);}
-{parenthesis}	{printf("parenthesis , %s\n" , yytext);}
-{curly_braces}	{printf("Curly , %s\n" , yytext);}
-{delim}			{}
+{order_num}		{fprintf(yyout , "Order number: %s\n", yytext);}
+{name}			{
+					if(!is_name)
+					{
+						fprintf(yyout , "Name: %s ", yytext);
+						is_name = 1;
+					}
+					else 
+						fprintf(yyout , "%s " , yytext);
+				}
+{email}			{fprintf(yyout , "\nEmail: %s\n", yytext); is_name = 0;}
+{date}			{fprintf(yyout , "Date: %s\n", yytext);count++;}
+{airtel}		{fprintf(yyout , "airtel number: %s\n", yytext);}
+{bl}			{fprintf(yyout , "bangalink number: %s\n", yytext);}
+{gp}			{fprintf(yyout , "grameen phone number: %s\n", yytext);}
+.				{}
 %%
 
 int main()
 {
+	yyin = fopen("input.txt" , "r");
+	yyout = fopen("output_prac.txt" , "w");
 	yylex();
+	fprintf(yyout , "Total Order %d", count);
+	fclose(yyin);
+	fclose(yyout);
 	return 0;
 }
