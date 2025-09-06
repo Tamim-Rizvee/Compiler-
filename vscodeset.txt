@@ -7,7 +7,7 @@
     "editor.minimap.enabled": false,
     "background.windowBackgrounds": [
         "/home/tamim-rizvee/Pictures/tanjiro-kamado-cute-anime-3840x2160-12045.jpg",
-        "d:/wallpapers/night-starry-sky-forest-silhouette-astronomy-cosmos-5k-5005x3417-1679.jpg"
+        "d:/wallpapers/wallpaperflare.com_wallpaper \\(2\\).jpg"
     ],
     "editor.fontFamily": "cartograph CF",
     "editor.scrollbar.vertical": "hidden",
@@ -36,27 +36,35 @@
     "background.autoInstall": false,
     "background.smoothImageRendering": true,
     "background.backgroundOpacity": [
-        0.9,
+        0.83,
         0.1,
         0.1,
         0.1
     ],
     "workbench.colorCustomizations": {
-        "editor.background": "#0d1017",
+        "editorGroupHeader.tabsBackground": "#0d1117",
+        "editorGroupHeader.tabsBorder": "#161b22",
+        "menu.background": "#0d1117",
+        "menu.border": "#21262d",
+        "quickInput.background": "#0d1117",
+        "editor.background": "#0d1117",
+        "editor.lineHighlightBackground": "#1d2c40",
         "editorCursor.foreground": "#ffffff",
         "editorLineNumber.activeForeground": "#ffffff",
-        "editor.selectionBackground": "#272a2c",
-        "sideBar.background": "#0d1017",
-        "tab.activeBackground": "#363c49",
-        "tab.inactiveBackground": "#0d1017",
+        "editor.selectionBackground": "#1f2937",
+        "sideBar.background": "#0d1117",
+        "tab.activeBackground": "#161b22",
+        "tab.inactiveBackground": "#0d1117",
         "tab.activeForeground": "#ffffff",
-        "tab.border": "#000000",
-        "tab.activeBorderTop": "#00000000",
-        "statusBar.background": "#000000",
-        "statusBar.foreground": "#9f9292",
-        "statusBar.border": "#000000",
-        "titleBar.border": "#000000",
-        "titleBar.activeBackground": "#000000",
+        "tab.border": "#0d1117",
+        "tab.activeBorderTop": "#58a6ff",
+        "statusBar.background": "#0d1117",
+        "statusBar.foreground": "#f0f6fc",
+        "statusBar.border": "#0d1117",
+        "statusBarItem.remoteBackground" : "#0d1117",
+        "statusBarItem.remoteForeground" : "#f0f6fc",
+        "titleBar.border": "#0d1117",
+        "titleBar.activeBackground": "#0d1117",
         "editorOverviewRuler.wordHighlightStrongForeground": "#0000",
         "editorOverviewRuler.selectionHighlightForeground": "#0000",
         "editorOverviewRuler.rangeHighlightForeground": "#0000",
@@ -77,8 +85,8 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "custom-ui-style.electron": {
         "titleBarStyle": "hiddenInset",
-        "titlebar": {
-            "backgroundColor": "#000000",
+        "custom-ui-style.titlebar": {
+            "backgroundColor": "#0d1117",
         },
         "trafficLightPosition": {
             "x": 20,
@@ -93,7 +101,7 @@
         ".quick-input-list .scrollbar": "display: none",
         ".monaco-action-bar.quick-input-inline-action-bar": "display: none",
         ".editor-widget.find-widget": "box-shadow: none; border-radius: 4px",
-        ".quick-input-titlebar": "background: #000000 !important",
+        ".quick-input-titlebar": "background: #0d1117 !important",
         ".monaco-workbench .part.editor > .content .editor-group-container > .title.title-border-bottom:after": "display: none",
         ".monaco-scrollable-element > .shadow.top": "display: none",
         ".sidebar .title-label": "padding: 0 !important",
@@ -102,6 +110,7 @@
         ".monaco-list-row.focused": "outline: none !important",
         ".monaco-editor .scroll-decoration": "display: none",
         ".title-actions": "display: none !important",
+        ".sidebar .title-actions": "display: none !important",
         ".title.show-file-icons .label-container .monaco-icon-label.file-icon": "justify-content: center; padding: 0 !important",
         ".title .monaco-icon-label:after": "margin-right: 0",
         ".monaco-workbench .part.editor > .content .editor-group-container > .title > .label-container > .title-label": "padding-left: 60px",
@@ -175,5 +184,7 @@
         "0",
         "0",
         "0"
-    ]
+    ],
+    "editor.autoIndentOnPaste": true,
+    "git.confirmSync": false
 }
