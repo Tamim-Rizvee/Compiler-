@@ -1,0 +1,10 @@
+0 -> 
+1 -> 
+2 -> <b , IDENTIFIER> 
+3 -> 
+4 -> <20.5 , NUMBER> 
+5 -> 
+6 -> <10 , NUMBER> <c , IDENTIFIER> 
+7 -> 
+8 -> <a , IDENTIFIER> <9 , NUMBER> 
+9 -> 
