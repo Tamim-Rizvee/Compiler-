@@ -19,7 +19,8 @@
     char * next_var(int i)
     {
         char *var = (char *) malloc(15);
-        sprintf(var , "t%d" , i);
+        int temp_num = ((i - 1) % 3) + 1;  // Cycle through 1, 2, 3
+        sprintf(var , "t%d" , temp_num);
         return var;
     }
 %}
@@ -69,7 +70,7 @@ var_decl:
     type_spec decl_list SEMICOLON
     {
         string var = $2.getSymbol();
-        asmc.data += var + "\t\tdb ?\n";
+        asmc.data += "\t"+  var + " db ?\n";
     }
 ;
 decl_list:
@@ -151,6 +152,9 @@ int main()
     fasm << ".MODEL SMALL\n";
     fasm << ".STACK 100H\n";
     fasm << ".DATA\n";
+    fasm << "\t t1 db ?\n";
+    fasm << "\t t2 db ?\n";
+    fasm << "\t t2 db ?\n";
     yyin = fopen("input.txt" , "r");
     yyparse();
     fclose(yyin);

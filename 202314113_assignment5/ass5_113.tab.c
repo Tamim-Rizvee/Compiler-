@@ -68,7 +68,7 @@
 /* Copy the first part of user declarations.  */
 
 /* Line 189 of yacc.c  */
-#line 1 ".\\ass5_113.y"
+#line 1 "ass5_113.y"
 
     #include<bits/stdc++.h>
     #include "SymbolTable.h"
@@ -90,13 +90,14 @@
     char * next_var(int i)
     {
         char *var = (char *) malloc(15);
-        sprintf(var , "t%d" , i);
+        int temp_num = ((i - 1) % 3) + 1;  // Cycle through 1, 2, 3
+        sprintf(var , "t%d" , temp_num);
         return var;
     }
 
 
 /* Line 189 of yacc.c  */
-#line 100 "ass5_113.tab.c"
+#line 101 "ass5_113.tab.c"
 
 /* Enabling traces.  */
 #ifndef YYDEBUG
@@ -154,7 +155,7 @@ typedef int YYSTYPE;
 
 
 /* Line 264 of yacc.c  */
-#line 158 "ass5_113.tab.c"
+#line 159 "ass5_113.tab.c"
 
 #ifdef short
 # undef short
@@ -443,8 +444,8 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    43,    43,    52,    53,    56,    61,    69,    76,    82,
-      85,    99,   103,   115,   127,   139,   140,   143
+       0,    44,    44,    53,    54,    57,    62,    70,    77,    83,
+      86,   100,   104,   116,   128,   140,   141,   144
 };
 #endif
 
@@ -1360,7 +1361,7 @@ yyreduce:
         case 2:
 
 /* Line 1455 of yacc.c  */
-#line 44 ".\\ass5_113.y"
+#line 45 "ass5_113.y"
     {
         fasm << asmc.data << endl;
         fasm << ".CODE\n";
@@ -1373,21 +1374,21 @@ yyreduce:
   case 3:
 
 /* Line 1455 of yacc.c  */
-#line 52 ".\\ass5_113.y"
+#line 53 "ass5_113.y"
     {;}
     break;
 
   case 4:
 
 /* Line 1455 of yacc.c  */
-#line 53 ".\\ass5_113.y"
+#line 54 "ass5_113.y"
     {;}
     break;
 
   case 5:
 
 /* Line 1455 of yacc.c  */
-#line 57 ".\\ass5_113.y"
+#line 58 "ass5_113.y"
     {
         t_count = 1;
         printf("\t\n");
@@ -1397,7 +1398,7 @@ yyreduce:
   case 6:
 
 /* Line 1455 of yacc.c  */
-#line 62 ".\\ass5_113.y"
+#line 63 "ass5_113.y"
     {
         t_count = 1;
         printf("\t\n");
@@ -1407,17 +1408,17 @@ yyreduce:
   case 7:
 
 /* Line 1455 of yacc.c  */
-#line 70 ".\\ass5_113.y"
+#line 71 "ass5_113.y"
     {
         string var = (yyvsp[(2) - (3)]).getSymbol();
-        asmc.data += var + "\t\tdb ?\n";
+        asmc.data += "\t"+  var + " db ?\n";
     ;}
     break;
 
   case 8:
 
 /* Line 1455 of yacc.c  */
-#line 77 ".\\ass5_113.y"
+#line 78 "ass5_113.y"
     {
         (yyval) = (yyvsp[(1) - (1)]);
     ;}
@@ -1426,14 +1427,14 @@ yyreduce:
   case 9:
 
 /* Line 1455 of yacc.c  */
-#line 82 ".\\ass5_113.y"
+#line 83 "ass5_113.y"
     { (yyval) = (yyvsp[(1) - (1)]);;}
     break;
 
   case 10:
 
 /* Line 1455 of yacc.c  */
-#line 86 ".\\ass5_113.y"
+#line 87 "ass5_113.y"
     {
         t_count -= 1;
         str = next_var(t_count);
@@ -1450,7 +1451,7 @@ yyreduce:
   case 11:
 
 /* Line 1455 of yacc.c  */
-#line 100 ".\\ass5_113.y"
+#line 101 "ass5_113.y"
     {
         (yyval) = (yyvsp[(2) - (3)]);
     ;}
@@ -1459,7 +1460,7 @@ yyreduce:
   case 12:
 
 /* Line 1455 of yacc.c  */
-#line 104 ".\\ass5_113.y"
+#line 105 "ass5_113.y"
     {
         str = next_var(t_count);
         SymbolInfo obj(string(str) , "");
@@ -1476,7 +1477,7 @@ yyreduce:
   case 13:
 
 /* Line 1455 of yacc.c  */
-#line 116 ".\\ass5_113.y"
+#line 117 "ass5_113.y"
     {
         str = next_var(t_count);
         SymbolInfo obj(string(str) , "");
@@ -1493,7 +1494,7 @@ yyreduce:
   case 14:
 
 /* Line 1455 of yacc.c  */
-#line 128 ".\\ass5_113.y"
+#line 129 "ass5_113.y"
     {
         str = next_var(t_count);
         SymbolInfo obj(string(str) , "");
@@ -1510,21 +1511,21 @@ yyreduce:
   case 15:
 
 /* Line 1455 of yacc.c  */
-#line 139 ".\\ass5_113.y"
+#line 140 "ass5_113.y"
     { (yyval) = (yyvsp[(1) - (1)]); ;}
     break;
 
   case 16:
 
 /* Line 1455 of yacc.c  */
-#line 140 ".\\ass5_113.y"
+#line 141 "ass5_113.y"
     { (yyval) = (yyvsp[(1) - (1)]); ;}
     break;
 
   case 17:
 
 /* Line 1455 of yacc.c  */
-#line 144 ".\\ass5_113.y"
+#line 145 "ass5_113.y"
     {
         (yyval) = (yyvsp[(1) - (1)]);
     ;}
@@ -1533,7 +1534,7 @@ yyreduce:
 
 
 /* Line 1455 of yacc.c  */
-#line 1537 "ass5_113.tab.c"
+#line 1538 "ass5_113.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -1745,13 +1746,16 @@ yyreturn:
 
 
 /* Line 1675 of yacc.c  */
-#line 148 ".\\ass5_113.y"
+#line 149 "ass5_113.y"
 
 int main()
 {
     fasm << ".MODEL SMALL\n";
     fasm << ".STACK 100H\n";
     fasm << ".DATA\n";
+    fasm << "\t t1 db ?\n";
+    fasm << "\t t2 db ?\n";
+    fasm << "\t t2 db ?\n";
     yyin = fopen("input.txt" , "r");
     yyparse();
     fclose(yyin);

@@ -1,9 +1,12 @@
 .MODEL SMALL
 .STACK 100H
 .DATA
-a		db ?
-c		db ?
-d		db ?
+	 t1 db ?
+	 t2 db ?
+	 t2 db ?
+	a db ?
+	c db ?
+	d db ?
 
 .CODE
 MAIN PROC
@@ -34,7 +37,7 @@ MUL BX
 MOV AX , t1
 MOV BX , t3
 SUB AX , BX
-MOV AX , t4
+MOV AX , t1
 MOV d ,AX
 MAIN ENDP
 END MAIN

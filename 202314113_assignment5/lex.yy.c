@@ -380,9 +380,9 @@ static char *yy_last_accepting_cpos;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 ".\\ass5_113.l"
+#line 1 "ass5_113.l"
 #define INITIAL 0
-#line 3 ".\\ass5_113.l"
+#line 3 "ass5_113.l"
     #include<bits/stdc++.h>
     #include "SymbolTable.h"
     #define YYSTYPE SymbolInfo
@@ -541,7 +541,7 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 17 ".\\ass5_113.l"
+#line 17 "ass5_113.l"
 
 #line 547 "lex.yy.c"
 
@@ -628,33 +628,33 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 18 ".\\ass5_113.l"
+#line 18 "ass5_113.l"
 {
                 return MAIN;
             }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 21 ".\\ass5_113.l"
+#line 21 "ass5_113.l"
 {
                 return INT;
             }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 24 ".\\ass5_113.l"
+#line 24 "ass5_113.l"
 {}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 25 ".\\ass5_113.l"
+#line 25 "ass5_113.l"
 {
                 return NEWLINE;
             }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 28 ".\\ass5_113.l"
+#line 28 "ass5_113.l"
 {
                 string value = string(yytext) , token = "IDENTIFIER";
                 SymbolInfo ob(value , token);
@@ -665,7 +665,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 35 ".\\ass5_113.l"
+#line 35 "ass5_113.l"
 {
                 string value = string(yytext) , token = "NUMBER";
                 SymbolInfo ob(value , token);
@@ -676,70 +676,70 @@ YY_RULE_SETUP
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 42 ".\\ass5_113.l"
+#line 42 "ass5_113.l"
 {
                 return ADD;
             }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 45 ".\\ass5_113.l"
+#line 45 "ass5_113.l"
 {
                 return SUB;
             }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 48 ".\\ass5_113.l"
+#line 48 "ass5_113.l"
 {
                 return MUL;
             }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 51 ".\\ass5_113.l"
+#line 51 "ass5_113.l"
 {
                 return LCURLY;
             }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 54 ".\\ass5_113.l"
+#line 54 "ass5_113.l"
 {
                 return RCULRLY;
             }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 57 ".\\ass5_113.l"
+#line 57 "ass5_113.l"
 {
                 return LPAREN;
             }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 60 ".\\ass5_113.l"
+#line 60 "ass5_113.l"
 {
                 return RPAREN;
             }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 63 ".\\ass5_113.l"
+#line 63 "ass5_113.l"
 {
                 return ASSOP;
             }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 66 ".\\ass5_113.l"
+#line 66 "ass5_113.l"
 {
                 return SEMICOLON;
             }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 69 ".\\ass5_113.l"
+#line 69 "ass5_113.l"
 {
                 char msg[25];
                 sprintf(msg , "%s %s" , "Invalid character" , yytext);
@@ -748,7 +748,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 74 ".\\ass5_113.l"
+#line 74 "ass5_113.l"
 ECHO;
 	YY_BREAK
 #line 755 "lex.yy.c"
@@ -1637,5 +1637,5 @@ int main()
 	return 0;
 	}
 #endif
-#line 74 ".\\ass5_113.l"
+#line 74 "ass5_113.l"
 
